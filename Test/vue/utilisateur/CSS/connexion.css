@@ -1,0 +1,149 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height : 100%;
+  background: linear-gradient(white, #D3D8E8);
+}
+nav{
+  display: flex;
+  background-color: #3b5998;
+  background-image: linear-gradient(#4e69a2, #3b5998 50%);
+  justify-content: center;
+  align-items: center;
+
+}
+nav input{
+  padding: 4px 0 4px 8px;
+  width : 180px;
+}
+nav input[type=submit]{
+  background-color: #4267b2;
+  border-color: #29487d;
+  color : white;
+}
+
+nav input[type=submit]:hover{
+  background-color: #365899;
+  border-color: #29487d;
+}
+
+
+nav td{
+  color: white;
+  font-size: smaller;
+  padding-right : 10px;
+}
+nav td p{
+  color: #93b5ff;
+  font-size: 0.7rem;
+  
+}
+
+td label{
+  margin:0;
+}
+nav form{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-text{
+  margin-left: 30%;
+  width:600px;
+  padding: 30px;
+}
+
+#container{
+  width:40%;
+  margin:0 auto;
+ 
+}
+/* Bordered form */
+#container form {
+  width:600px;
+  padding: 30px;
+
+}
+#container h1{
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+
+/* Full-width inputs */
+#container  input{
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.bloc2 input{
+  padding: 12px 20px;
+  width : 100%;
+}
+.bloc1 input{
+  padding: 12px 20px;
+  width : 267px;
+}
+
+.date input{
+  padding: 4px 0 4px 8px;
+  width: 70px;
+  font-size: smaller;
+}
+
+.date p {
+  display: inline-block;
+  width: 200px;
+  font-size: smaller;
+  margin-left: 10px;
+  line-height: 1.3em;
+  color : #3b5998;
+}
+
+#container label{
+  font-size: larger;
+}
+
+.conditions p{
+  width: 350px;
+  font-size: smaller;
+  line-height: 1.3em;
+
+}
+
+.conditions p b{
+  color : #3b5998;
+}
+
+
+
+/* Set a style for all buttons */
+#container input[type=submit] {
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  background-color: #69a74e;
+  background: linear-gradient(#67ae55, #578843);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  display : block;
+  width : 200px;
+  font-weight: bold;
+}
+
+#container input[type=submit]:hover {
+  background-color: white;
+  background: linear-gradient(#79bc64, #578843);
+}

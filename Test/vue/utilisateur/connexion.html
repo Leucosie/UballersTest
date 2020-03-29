@@ -1,0 +1,90 @@
+<html lang="fr">
+    <head>
+       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href=".\vue\utilisateur\CSS\connexion.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+        <script src=".\vue\utilisateur\JS\connexion.js"></script>
+    </head>
+
+        
+  
+            <body>
+                <nav class="navbar navbar-light bg-light"  >
+                    <span class="navbar-text">
+                         <!-- zone de connexion -->
+                        <form  action="index.php?controle=utilisateur&action=ident" method="post">
+                            <table>
+                        <tr>
+                            <td><label for="login"><b>Adresse e-mail ou mobile</b></label></td>
+                            <td><label for ="pass"><b>Mot de passe</b></label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Votre login" name="login" required></td>
+                            <td><input type="password" placeholder="Votre mot de passe" name="pass" required></td>
+                            <td><input type="submit" id='connexion' value='Connexion' ></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                  <?php 
+                                    $o= "<p style='color : red;'> %s </p>";
+                                    printf($o,$msgCo);
+                                    ?></p>
+                               
+                            </td><td><p>Informations de compte oubliées ?</p></td>
+                        </tr>
+                        
+                    </table>
+                        
+                                  
+                       
+                        </form>
+                    </span>
+                  </nav>
+                <div id="container">
+
+            <!-- zone d'inscription' -->
+            
+            <form id="formInscription" action="index.php?controle=utilisateur&action=inscription" method="post">
+                <h1><b>Inscription</b></h1>
+                <h4>C'est gratuit (et ça le restera toujours)</h4>
+                <div id="message">
+                    <?php 
+                        $o= "<p> %s </p>";
+                        printf($o,$msgIns);
+                    ?></p>
+                </div>
+
+                <div class="bloc1">
+                    <input type="text" pattern="^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$" placeholder="Prénom" name="prenom" id="prenom" required>
+                    <input type="text" pattern="^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$" placeholder="Nom de famille" name="nom" id="nom" required>
+                </div>
+                <div class="bloc2">
+                    <input type="text"  placeholder="Numéro de mobile ou email" name="login" id="login" required>
+                    <input type="text"  placeholder="Confirmer numéro de mobile ou email" id="login_confirmation" name="login_confirmation" required>
+                    <input type="password" placeholder="Nouveau mot de passe" name="pass" required>
+               </div>
+
+                <br><label>Date de naissance</label>
+                <div class="date">
+                    <input type="number" placeholder="Jour" name="jour" min="1" max="31" required>
+                    <input type="number" placeholder="Mois" name="mois" min="01" max="12" required>
+                    <input type="number" placeholder="Année" name="annee" min="1905" max="2020" required>
+                    <p>Pourquoi indiquer ma date de naissance ?</p>
+                </div>
+                <input type="radio" id="femme" name="genre" value="Mme" required>
+                <label for="femme">Femme</label>
+                <input type="radio" id="homme" name="genre" value="M">
+                <label for="homme">Homme</label>
+                
+                <div class="conditions">
+                <p>En cliquant sur inscription, vous acceptez nos <b>Conditions</b> et indiquez que vous avez lu notre <b>Politique d'utilisation des données</b>,
+                    y compris notre <b>Utilisation des cookies</b>.
+                    Vous pourrez recevoir des notifications par texto de la part de Facebook et pourrez vous désabonner à tout moment.</p>
+                </div>
+                <input type="submit" id='inscription' value='Inscription' >
+            </form>
+        </div>
+    </body>
+</html>

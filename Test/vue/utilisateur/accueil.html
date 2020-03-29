@@ -1,0 +1,31 @@
+<html lang="fr">
+    <head>
+       <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href=".\vue\utilisateur\CSS\connexion.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light"  >
+            <span class="navbar-text">
+                 <!-- zone de connexion -->
+                <form action="index.php?controle=utilisateur&action=deconnexion" method="post">
+
+                    <input type="submit" id='submit' value='Deconnexion' >
+               
+                </form>
+            </span>
+          </nav>
+        <div id="container">
+            <form action="index.php?controle=utilisateur&action=deconnexion" method="post">
+
+              <h1> Bienvenue
+                <?php printf ("%s %s %s" ,$_SESSION['profil']['genre'],$_SESSION['profil']['prenom'],$_SESSION['profil']['nom']); 
+                echo ('<br/>');
+                ?></h1>
+                <input type="submit" id='submit' value='Deconnexion' >
+            </form>
+        </div>
+    </body>
+</html>
