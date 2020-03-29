@@ -1,7 +1,4 @@
 <?php 
-/*controleur c1.php :
-  fonctions-action de gestion (c1)
-*/
 
 function ident() {
 	$login=  isset($_POST['login'])?($_POST['login']):'';
