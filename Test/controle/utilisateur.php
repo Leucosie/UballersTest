@@ -7,25 +7,23 @@ function ident() {
 	$msgIns='';
 
 	if  (count($_POST)==0){
-        require ("./vue/utilisateur/connexion.html") ;
+       		require ("./vue/utilisateur/connexion.html") ;
 	}
-    else {
-	    if  (! verif_ident($login,$pass)) {
+    	else {
+		if  (! verif_ident($login,$pass)) {
 			$_SESSION['profil']=array();
-	        $msgCo ="erreur de saisie";
-	        require ("./vue/utilisateur/connexion.html") ;
+	        	$msgCo ="erreur de saisie";
+	        	require ("./vue/utilisateur/connexion.html") ;
 		}
-	    else { 
-		
+	    	else { 		
 			require ("./vue/utilisateur/accueil.html") ;
-
 		}
-    }	
+    	}	
 }
 
 function verif_ident($login,$pass) {
-		require ('./modele/utilisateurBD.php');
-		return verif_ident_BD($login,$pass); //true ou false en base;
+	require ('./modele/utilisateurBD.php');
+	return verif_ident_BD($login,$pass); //true ou false en base;
 }
 
 function inscription() {
@@ -39,7 +37,7 @@ function inscription() {
 	$mois=  isset($_POST['mois'])?($_POST['mois']):'';
 	$jour=  isset($_POST['jour'])?($_POST['jour']):'';
 	$regexEmail = "/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i";
-    $regexTel ="/^0\d(\s|-)?(\d{2}(\s|-)?){4}$/";
+    	$regexTel ="/^0\d(\s|-)?(\d{2}(\s|-)?){4}$/";
 	$msgCo='';
 	$msgIns='';
 
@@ -48,9 +46,8 @@ function inscription() {
 		require ("./vue/utilisateur/connexion.html") ;
 		$msgIns ="Vous n'avez pas rempli correctement tous les champs";
 	}
-    else {
-		require ('./modele/utilisateurBD.php');
-		
+    	else {
+		require ('./modele/utilisateurBD.php');		
 		$date_de_naissance = $annee."-".$mois."-".$jour;
 		$bool = inscriptionBD($identifiant,$mot_de_passe,$date_de_naissance,$nom,$prenom,$genre); 
 		$msgIns = "Inscription réussie !";
