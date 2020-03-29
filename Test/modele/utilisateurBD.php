@@ -32,7 +32,7 @@ function verif_ident_BD($login,$pass){
 		$b_util = $cde_util->execute();
 		
 		if (($b_util)) {
-			$res_util = $cde_util->fetchAll(PDO::FETCH_ASSOC); //tableau d'enregistrements
+			$res_util = $cde_util->fetchAll(PDO::FETCH_ASSOC); 
 			}
 	}
 	catch (PDOException $e) {
@@ -53,7 +53,7 @@ function verif_ident_BD($login,$pass){
 		
 	}	
 		
-		return false;
+	return false;
 }
 
 
@@ -64,11 +64,11 @@ function inscriptionBD($identifiant,$mot_de_passe,$date_de_naissance,$nom,$preno
 
 	try {
 		$sql="INSERT INTO utilisateur (genre, nom, prenom, date_de_naissance, identifiant, mot_de_passe) VALUES('".$genre."', '".$nom."', '".$prenom."','".$date_de_naissance."','".$identifiant."','".$mdp."')" ;
-			$commande = $pdo->prepare($sql);
-			$bool = $commande->execute();
-			if($bool){
-				return true;
-			}
+		$commande = $pdo->prepare($sql);
+		$bool = $commande->execute();
+		if($bool){
+			return true;
+		}
 	}
 	catch (PDOException $e) {
 		echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
@@ -78,16 +78,6 @@ function inscriptionBD($identifiant,$mot_de_passe,$date_de_naissance,$nom,$preno
 	return false;
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
