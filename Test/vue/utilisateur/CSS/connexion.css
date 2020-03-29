@@ -86,11 +86,11 @@ nav form{
   border-radius: 10px;
 }
 
-.bloc2 input{
+.identification input{
   padding: 12px 20px;
   width : 100%;
 }
-.bloc1 input{
+.identite input{
   padding: 12px 20px;
   width : 267px;
 }
@@ -125,9 +125,6 @@ nav form{
   color : #3b5998;
 }
 
-
-
-/* Set a style for all buttons */
 #container input[type=submit] {
   box-shadow: inset 0 1px 1px #a4e388;
   border-color: #3b6e22 #3b6e22 #2c5115;
