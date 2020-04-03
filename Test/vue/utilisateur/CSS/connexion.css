@@ -144,3 +144,24 @@ nav form{
   background-color: white;
   background: linear-gradient(#79bc64, #578843);
 }
+
+@media screen and ( max-width: 1000px ){
+  .navbar-text{
+    margin-left: 20%;
+  }
+
+  #container{
+    width:60%;
+   
+  }
+}
+
+@media screen and ( max-width: 800px ){
+  .navbar-text{
+    margin-left: 0;
+  }
+
+  #container{
+    width:100%;
+  }
+}
