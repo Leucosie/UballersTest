@@ -33,16 +33,10 @@ $(document).ready(function(){
         return correct;
     }
 
-    function erreurNom(){
-        var nom = $("#nom");
-        if (nom.validity.typeMismatch){
-            nom.setCustomValidity("Il ne doit y avoir que des lettres");
-        }
-    }
+
 
    function init(){
       $("#formInscription").submit(valide);
-      $("$nom").keyup(erreurNom);
    }
 
 });
